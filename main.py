@@ -1,8 +1,10 @@
+# -*- coding: utf-8 -*-
+
 from random import randint
 
 W =60
 H =60
-MAX_ROOMS = 12
+MAX_ROOMS = 30
 def grid():
 	g = []
 	r = []
@@ -39,8 +41,8 @@ def room():
 	room = {}
 	room['x'] = randint(1,W-10);
 	room['y'] = randint(1,H-10);
-	room['w'] = randint(9,13);
-	room['h'] = randint(9,13);
+	room['w'] = randint(5,9);
+	room['h'] = randint(5,7);
 	return room
 
 def get_rooms():
@@ -114,7 +116,7 @@ def render(G,rooms):
 		for c in range(x,x+w):
 
 			for d in range(y,y+h):
-				G[c][d] = '#'
+				G[c][d] = '▓'
 	return G
 
 G = grid()	
